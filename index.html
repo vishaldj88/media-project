@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>online Mobile Store</title>
+  <title>Online Mobile Store</title>
   <meta charset="utf-8" />
   <!-- Seo  words -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,9 +15,13 @@
   <script src="./js/mobilestore.min.js"></script>
   <script>
     $(document).ready(function () {
-      var context = mobilenamespace.jsondata();
-      mobilenamespace.loaddata(context);
-      console.log(context);
+      //load data json from external file
+      var url = 'https://raw.githubusercontent.com/vishaldj88/media-project/master/data/content.json';
+      $.getJSON(url)
+        .done(function( data ) {
+          var context =data[0];
+          mobilenamespace.loaddata(context);
+        });   
     });
   </script>
 </head>
@@ -26,16 +29,16 @@
 <body class="bodycustom">
   <div class="row">
     <div class="pull-right col-xs-6 padding-0">
-      <img src="images/icons8-search-50.png" id="headersrc" alt="search" class="pull-right img-responsive"/>
-      <img src="images/icons8-user-24.png" id="headerusr" alt="profile" class="pull-right img-responsive"/>
-      <img src="images/cart-32.png" id="headercart" alt="cart" class="pull-right img-responsive"/>
+      <img  id="headersrc" alt="search" class="pull-right img-responsive"/>
+      <img  id="headerusr" alt="profile" class="pull-right img-responsive"/>
+      <img  id="headercart" alt="cart" class="pull-right img-responsive"/>
     </div>
   </div>
   <!--Navigation Bar-->
   <nav class="navbar navbar-default margindefault">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#"><img src="images/logo.png" alt="site logo" id="imglogo" /></a>
+        <a class="navbar-brand" href="#"><img alt="site logo" id="imglogo" /></a>
       </div>
       <div id="hideNav" class="hideNav">
         <ul class="nav navbar-nav">
@@ -59,7 +62,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="./images/carosuel.png" id="motocr" alt="moto g" data-toggle="modal" data-target="#myModalMoto" class="imgfull" />
+        <img  id="motocr" alt="moto g" data-toggle="modal" data-target="#myModalMoto" class="imgfull" />
         <div class="extend" id="cormotog">
           <h4 id="h4cormotog"></h4>
           <h5 id="h5cormotog"></h5>
@@ -68,7 +71,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="./images/sony.jpg" id="sonycr" alt="Sony" data-toggle="modal" data-target="#myModalsony" class="imgfull" />
+        <img id="sonycr" alt="Sony" data-toggle="modal" data-target="#myModalsony" class="imgfull" />
         <span class="sr-only">
           <!-- Next -->
         </span>
@@ -80,7 +83,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="./images/windowcell.jpg" id="wincr" alt="Windows" data-toggle="modal" data-target="#myModalwin" class="imgfull" />
+        <img id="wincr" alt="Windows" data-toggle="modal" data-target="#myModalwin" class="imgfull" />
 
         <div class="extendwin" id="corwin">
           <h4 id="h4corwin"></h4>
@@ -124,28 +127,28 @@
     </div>
     <div class="col-sm-3">
       <div id="mobile-1" class="whitebackground">
-        <img src="images/mobile2.png" alt="moto g" id="motomob1" />
+        <img  alt="moto g" id="motomob1" />
         <h4 class="centre">Moto G</h4>
-        <span><img src="images/cart.png" alt="cart" id="motocart" class="bottom-left" /><img src="images/whishlist.png"
-            class="bottom-right" alt="wish list" id="motocart" /></span>
+        <span><img alt="cart" id="motocart" class="bottom-left" /><img
+            class="bottom-right" alt="wish list" id="whishlist1" /></span>
       </div>
     </div>
     <div class="col-sm-3">
       <div id="mobile-2" class="whitebackground">
-        <img src="images/mobile1.png" alt="Xperia" id="xprcart">
+        <img alt="Xperia" id="xprcart">
         <h4 class="centre">Moto G</h4>
-        <span><img src="images/cart.png" alt="cart" id="motoxcart" class="bottom-left" /><img src="images/whishlist.png"
-            class="bottom-right" alt="wish list" id="motoxwish" /></span>
+        <span><img alt="cart" id="motoxcart" class="bottom-left" /><img
+            class="bottom-right" alt="wish list" id="whishlist2" /></span>
       </div>
     </div>
 
 
     <div class="col-sm-3">
       <div id="mobile-3" class="whitebackground">
-        <img src="images/mobile2.png" alt="moto g" id="mobile2" />
+        <img alt="moto g" id="mobile2" />
         <h4 class="centre">Moto G</h4>
-        <span><img src="images/cart.png" class="bottom-left" id="cartId" alt="cart" /><img src="images/whishlist.png"
-            id="idwish" class="bottom-right" alt="wish list" /></span>
+        <span><img class="bottom-left" id="cartId" alt="cart" /><img
+            id="whishlist3" class="bottom-right" alt="wish list" /></span>
       </div>
     </div>
   </div>
@@ -179,29 +182,29 @@
     </div>
     <div class="col-sm-3">
       <div id="mobile-11" class="whitebacksq">
-        <img src="images/mobile2.png" alt="moto g" class="smallimg" id="mobile2" />
+        <img  alt="moto g" class="smallimg" id="mobile12" />
         &nbsp;
         &nbsp;
         <h4 class="centresq" id="h4motog">Moto G</h4>
-        <span><img src="images/cart.png" class="bottom-right-sq" alt="cart" id="mobilecart" /></span>
+        <span><img class="bottom-right-sq" alt="cart" id="mobilecart" /></span>
       </div>
     </div>
     <div class="col-sm-3">
       <div id="mobile-12" class="whitebacksq">
-        <img src="images/mobile1.png" alt="Xperia" class="smallimg" id="mobile1xp" />
+        <img  alt="Xperia" class="smallimg" id="mobile1xp" />
         &nbsp;
         &nbsp;
         <h4 class="centresq" id="h4xperia">Moto G</h4>
-        <span><img src="images/cart.png" class="bottom-right-sq" alt="cart" id="mobile1cart" /></span>
+        <span><img class="bottom-right-sq" alt="cart" id="mobile1cart" /></span>
       </div>
     </div>
     <div class="col-sm-3">
       <div id="mobile-21" class="whitebacksq">
-        <img src="images/mobile2.png" alt="moto g" class="smallimg" id="mobilemoto2" />
+        <img  alt="moto g" class="smallimg" id="mobilemoto2" />
         &nbsp;
         &nbsp;
         <h4 class="centresq" id="h4windows">Moto G</h4>
-        <span><img src="images/cart.png" class="bottom-right-sq" alt="cart" id="mobile2cart" /></span>
+        <span><img class="bottom-right-sq" alt="cart" id="mobile2cart" /></span>
       </div>
     </div>
   </div>
@@ -241,7 +244,7 @@
     <div class="row">
       <div class="col-sm-2 contentred" id="newsltr"><b id="bnwltrtext"></b></div>
       <div class="col-sm-5 contentalign" Id="subscribeNow"></div>
-      <div class="col-sm-1 emailalign"><img src="images/email.png" alt="email" id="mobileemail"></div>
+      <div class="col-sm-1 emailalign"><img alt="email" id="mobileemail"></div>
       <div class="col-sm-2 custalign"><input type="text" class="textalign" placeholder="Your email id" /></div>
       <div class="col-sm-2"><button class="btn btn-warning" id="Subscribe"></button></div>
     </div>
@@ -255,19 +258,19 @@
       <div class="container-fluid">
         <div class="mobnav">
           <a class="active" href="#home">
-            <img src="images/icons8-home-24.png" id="homembl" alt="home" />
+            <img id="homembl" alt="home" />
           </a>
           <a href="#news">
-            <img src="images/icons8-mobile-24.png" alt="mobile" id="mobilenews" />
+            <img alt="mobile" id="mobilenews" />
           </a>
           <a href="#contact">
-            <img src="images/icons8-gas-24.png" alt="hot deals " id="mobiledeals" />
+            <img alt="hot deals " id="mobiledeals" />
           </a>
           <a href="#contact">
-            <img src="images/icons8-contacts-24.png" alt="contact us" id="mobilecontact" />
+            <img alt="contact us" id="mobilecontact" />
           </a>
           <a href="#contact">
-            <img src="images/icons8-about-24.png" alt="about us" id="mobileabout" />
+            <img alt="about us" id="mobileabout" />
           </a>
         </div>
       </div>
@@ -285,7 +288,7 @@
         </div>
         <div class="modal-body">
           <p id="sonydesc" class="contentdark"></p>
-          <img src="./images/sony.jpg" alt="Sony" class="modsmallimg" id="modsony" />
+          <img alt="Sony" class="modsmallimg" id="modimgsony" />
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -306,7 +309,7 @@
         </div>
         <div class="modal-body">
           <p id="motodesc" class="contentdark"></p>
-          <img src="./images/carosuel.png" alt="Sony" class="modsmallimg" id="modmoto" />
+          <img  alt="moto" class="modsmallimg" id="modimgmoto" />
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -326,7 +329,7 @@
           <h4 class="modal-title contentdark" id="modwin"></h4>
         </div>
         <div class="modal-body">
-          <img src="./images/windowcell.jpg" alt="Windows" class="modsmallimg" id="modimgwin" />
+          <img alt="Windows" class="modsmallimg" id="modimgwin" />
           <p id="windesc" class="contentdark"></p>
         </div>
         <div class="modal-footer">
@@ -345,7 +348,7 @@
       <div class="col-sm-3 custtextalign" id="Sub2">
       </div>
       <div class="col-sm-3">
-        <p ID="paymenticons"></p><img src="./images/paymenticons.png" alt="payment options" id="imgpayment" />
+        <p ID="paymenticons"></p><img alt="payment options" id="imgpayment" />
       </div>
     </div>
   </footer>
