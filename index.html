@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>online Mobile Store</title>
+  <meta charset="utf-8" />
+  <!-- Seo  words -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="mobile store, online mobile, offers, mobile, iphone, sony, Windows" />
+  <meta name="description" content="Official dealer of motorolla,Official dealer of iphone,Official dealer of windows mobile phones." />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/min.custom.css" />
+  <!-- Js  library -->
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/mobilestore.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var context = mobilenamespace.jsondata();
+      mobilenamespace.loaddata(context);
+      console.log(context);
+    });
+  </script>
+</head>
+
+<body class="bodycustom">
+  <div class="row">
+    <div class="pull-right col-xs-6 padding-0">
+      <img src="images/icons8-search-50.png" id="headersrc" alt="search" class="pull-right img-responsive"/>
+      <img src="images/icons8-user-24.png" id="headerusr" alt="profile" class="pull-right img-responsive"/>
+      <img src="images/cart-32.png" id="headercart" alt="cart" class="pull-right img-responsive"/>
+    </div>
+  </div>
+  <!--Navigation Bar-->
+  <nav class="navbar navbar-default margindefault">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"><img src="images/logo.png" alt="site logo" id="imglogo" /></a>
+      </div>
+      <div id="hideNav" class="hideNav">
+        <ul class="nav navbar-nav">
+          <li class="cactive"><a href="#" id="home"></a></li>
+          <li><a href="#" id="Mobiles"></a></li>
+          <li><a href="#" id="hotdeal"></a></li>
+          <li><a href="#" id="about"></a></li>
+          <li><a href="#" id="contact"></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--Slider-->
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="./images/carosuel.png" id="motocr" alt="moto g" data-toggle="modal" data-target="#myModalMoto" class="imgfull" />
+        <div class="extend" id="cormotog">
+          <h4 id="h4cormotog"></h4>
+          <h5 id="h5cormotog"></h5>
+          <p id="pcormotog"></p>
+          <button class="btn btn-warning" id="btncormotog"></button>
+        </div>
+      </div>
+      <div class="item">
+        <img src="./images/sony.jpg" id="sonycr" alt="Sony" data-toggle="modal" data-target="#myModalsony" class="imgfull" />
+        <span class="sr-only">
+          <!-- Next -->
+        </span>
+        <div class="extendSony" id="corsony">
+          <h4 id="h4corsony"></h4>
+          <h5 id="h5corsony"></h5>
+          <p id="pcorsony"></p>
+          <button class="btn btn-primary" id="btncorsony"></button>
+        </div>
+      </div>
+      <div class="item">
+        <img src="./images/windowcell.jpg" id="wincr" alt="Windows" data-toggle="modal" data-target="#myModalwin" class="imgfull" />
+
+        <div class="extendwin" id="corwin">
+          <h4 id="h4corwin"></h4>
+          <h5 id="h5corwin"></h5>
+          <p id="pcorwin"></p>
+          <button class="btn btn-primary" id="btncorwin"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>-->
+  </div>
+  <!-- arrival text-->
+  <div class="contentcentre">
+    <div class="row">
+      <h4 id="sarrivals"><span id="spannew"></span> <span class="contentdark" id="spanarrv"></span></h4>
+    </div>
+  </div>
+  <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+  <div class="classcentre">
+    <p id="parrivals"></p>
+  </div>
+  <div class="row"> &nbsp;
+  </div>
+  <div class="row">
+    <div class="col-sm-3"> &nbsp;
+      <!-- <div id="mobile-0" class="whitebackground">
+              <img src="images/mobile2.png" alt="moto g" />
+              <h4 class="centre">Moto G</h4>
+              <span><img src="images/cart.png" alt="cart" class="bottom-left"><img src="images/whishlist.png" class="bottom-right"
+                  alt="wish list"></span>
+            </div> -->
+    </div>
+    <div class="col-sm-3">
+      <div id="mobile-1" class="whitebackground">
+        <img src="images/mobile2.png" alt="moto g" id="motomob1" />
+        <h4 class="centre">Moto G</h4>
+        <span><img src="images/cart.png" alt="cart" id="motocart" class="bottom-left" /><img src="images/whishlist.png"
+            class="bottom-right" alt="wish list" id="motocart" /></span>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div id="mobile-2" class="whitebackground">
+        <img src="images/mobile1.png" alt="Xperia" id="xprcart">
+        <h4 class="centre">Moto G</h4>
+        <span><img src="images/cart.png" alt="cart" id="motoxcart" class="bottom-left" /><img src="images/whishlist.png"
+            class="bottom-right" alt="wish list" id="motoxwish" /></span>
+      </div>
+    </div>
+
+
+    <div class="col-sm-3">
+      <div id="mobile-3" class="whitebackground">
+        <img src="images/mobile2.png" alt="moto g" id="mobile2" />
+        <h4 class="centre">Moto G</h4>
+        <span><img src="images/cart.png" class="bottom-left" id="cartId" alt="cart" /><img src="images/whishlist.png"
+            id="idwish" class="bottom-right" alt="wish list" /></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    &nbsp;
+  </div>
+
+  <div class="classcentrewhite">
+    <span class="contentdark"><b id="txtloadall"></b></span>
+  </div>
+
+  <div class="contentcentre">
+    <div class="row" Id="divsales">
+      <h4 Id="h4sales"><span id="salebest"></span> <span class="contentdark" id="saledark"></span></h4>
+    </div>
+  </div>
+  <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+  <div class="classcentre">
+    <p id="pseller"></p>
+  </div>
+  <div class="row">
+    <div class="col-sm-3"> &nbsp;
+      <!-- <div id="mobile-01" class="whitebacksq">
+        <img src="images/mobile2.png" alt="moto g" class="smallimg" />
+        &nbsp;
+        &nbsp;
+        <h4 class="centresq" id="h1motog">Moto G</h4>
+        <span><img src="images/cart.png" class="bottom-right-sq" alt="cart" /></span>
+      </div> -->
+    </div>
+    <div class="col-sm-3">
+      <div id="mobile-11" class="whitebacksq">
+        <img src="images/mobile2.png" alt="moto g" class="smallimg" id="mobile2" />
+        &nbsp;
+        &nbsp;
+        <h4 class="centresq" id="h4motog">Moto G</h4>
+        <span><img src="images/cart.png" class="bottom-right-sq" alt="cart" id="mobilecart" /></span>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div id="mobile-12" class="whitebacksq">
+        <img src="images/mobile1.png" alt="Xperia" class="smallimg" id="mobile1xp" />
+        &nbsp;
+        &nbsp;
+        <h4 class="centresq" id="h4xperia">Moto G</h4>
+        <span><img src="images/cart.png" class="bottom-right-sq" alt="cart" id="mobile1cart" /></span>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div id="mobile-21" class="whitebacksq">
+        <img src="images/mobile2.png" alt="moto g" class="smallimg" id="mobilemoto2" />
+        &nbsp;
+        &nbsp;
+        <h4 class="centresq" id="h4windows">Moto G</h4>
+        <span><img src="images/cart.png" class="bottom-right-sq" alt="cart" id="mobile2cart" /></span>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="contentcentre">
+    <div class="row">
+      <h4><span>Users </span> <span class="contentdark">Reviews</span></h4>
+    </div>
+  </div>
+  <div class="classcentre">
+    <p>Find out the best sellers collections</p>
+  </div>
+  <div>
+    <div class="row">
+      <div class="col-sm-3">&nbsp;</div>
+      <div class="col-sm-3">.col-sm-4</div>
+      <div class="col-sm-3">.col-sm-4</div>
+      <div class="col-sm-3">.col-sm-4</div>
+    </div>
+
+  </div>
+  <div>
+    <div class="row">
+      <div class="col-sm-3">&nbsp;</div>
+      <div class="col-sm-6">
+        <p>Find out the best sellers collections</p>
+      </div>
+    </div>
+    -->
+  <div class="row">
+    <div class="col-sm-6">&nbsp;</div>
+    <div class="col-sm-6">
+      <p>&nbsp;</p>
+    </div>
+  </div>
+  <!-- Subscribe Section -->
+  <div class="subscribe">
+    <div class="row">
+      <div class="col-sm-2 contentred" id="newsltr"><b id="bnwltrtext"></b></div>
+      <div class="col-sm-5 contentalign" Id="subscribeNow"></div>
+      <div class="col-sm-1 emailalign"><img src="images/email.png" alt="email" id="mobileemail"></div>
+      <div class="col-sm-2 custalign"><input type="text" class="textalign" placeholder="Your email id" /></div>
+      <div class="col-sm-2"><button class="btn btn-warning" id="Subscribe"></button></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">&nbsp;</div>
+  </div>
+  <!--Mobile footer Navigation Bar -->
+  <div id="navcontentmobile" class="hideDiv">
+    <nav class="navbar navbar-default margindefault">
+      <div class="container-fluid">
+        <div class="mobnav">
+          <a class="active" href="#home">
+            <img src="images/icons8-home-24.png" id="homembl" alt="home" />
+          </a>
+          <a href="#news">
+            <img src="images/icons8-mobile-24.png" alt="mobile" id="mobilenews" />
+          </a>
+          <a href="#contact">
+            <img src="images/icons8-gas-24.png" alt="hot deals " id="mobiledeals" />
+          </a>
+          <a href="#contact">
+            <img src="images/icons8-contacts-24.png" alt="contact us" id="mobilecontact" />
+          </a>
+          <a href="#contact">
+            <img src="images/icons8-about-24.png" alt="about us" id="mobileabout" />
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Modal Sony -->
+  <div id="myModalsony" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title contentdark" id="modsony"></h4>
+        </div>
+        <div class="modal-body">
+          <p id="sonydesc" class="contentdark"></p>
+          <img src="./images/sony.jpg" alt="Sony" class="modsmallimg" id="modsony" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal Moto -->
+  <div id="myModalMoto" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title contentdark" id="modmoto"></h4>
+        </div>
+        <div class="modal-body">
+          <p id="motodesc" class="contentdark"></p>
+          <img src="./images/carosuel.png" alt="Sony" class="modsmallimg" id="modmoto" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal Windows -->
+  <div id="myModalwin" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title contentdark" id="modwin"></h4>
+        </div>
+        <div class="modal-body">
+          <img src="./images/windowcell.jpg" alt="Windows" class="modsmallimg" id="modimgwin" />
+          <p id="windesc" class="contentdark"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap Footer -->
+  <footer class="footer">
+    <div class="row">
+      <div class="col-sm-3 custtextalign" id="about1">
+      </div>
+      <div class="col-sm-3 custtextalign" id="Sub1">
+      </div>
+      <div class="col-sm-3 custtextalign" id="Sub2">
+      </div>
+      <div class="col-sm-3">
+        <p ID="paymenticons"></p><img src="./images/paymenticons.png" alt="payment options" id="imgpayment" />
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
